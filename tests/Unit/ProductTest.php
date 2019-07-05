@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use App\Product;
 use Tests\TestCase;
 use Facades\Tests\Setup\ProductFactory;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -28,6 +27,4 @@ class ProductTest extends TestCase
 
         $this->assertInstanceOf('App\User', $product->owner);
     }
-
-    
 }

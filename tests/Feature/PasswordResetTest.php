@@ -83,6 +83,6 @@ class PasswordResetTest extends TestCase
             ->assertSuccessful()
             ->assertSee(__('passwords.sent'));
 
-      //    Notification::assertSentTo($user, ResetPassword::class);
+        //    Notification::assertSentTo($user, ResetPassword::class);
     }
 }

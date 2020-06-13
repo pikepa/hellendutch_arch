@@ -14,7 +14,7 @@ use Tests\TestCase;
 
 class PasswordResetTest extends TestCase
 {
-    use RefreshDatabase,Notifiable;
+    use RefreshDatabase, Notifiable;
     use WithFaker;
 
     const ROUTE_PASSWORD_EMAIL = 'password.email';
@@ -81,7 +81,8 @@ class PasswordResetTest extends TestCase
                 'email' => $user->email,
             ])
             ->assertSuccessful()
-            ->assertSee(__('passwords.sent'));
+            ->
+            assertSee(e(__('passwords.sent')));
 
         //    Notification::assertSentTo($user, ResetPassword::class);
     }
